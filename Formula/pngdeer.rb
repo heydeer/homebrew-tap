@@ -5,8 +5,6 @@ class Pngdeer < Formula
   license any_of: ["MIT", "Apache-2.0"]
 
   on_macos do
-    depends_on macos: :big_sur
-
     on_arm do
       url "https://github.com/heydeer/homebrew-tap/releases/download/pngdeer-v0.1.0/pngdeer-0.1.0-aarch64-apple-darwin.tar.gz"
       sha256 "5a8c07900a2573d58d80c876e96f57619ecbbd3715d74999773965ec34a9193e"
