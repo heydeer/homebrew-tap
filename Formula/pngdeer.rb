@@ -1,7 +1,6 @@
 class Pngdeer < Formula
   desc "Lossy PNG compression with automatic quality selection"
   homepage "https://github.com/heydeer/homebrew-tap"
-  version "0.1.0"
   license any_of: ["MIT", "Apache-2.0"]
 
   on_macos do
