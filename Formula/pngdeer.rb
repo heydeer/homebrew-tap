@@ -1,35 +1,35 @@
 class Pngdeer < Formula
   desc "Lossy PNG compression with automatic quality selection"
-  homepage "https://github.com/heydeer/homebrew-tap"
-  license any_of: ["MIT", "Apache-2.0"]
+  homepage "https://github.com/heydeer/pngdeer"
+  license "MIT"
 
   on_macos do
     on_arm do
-      url "https://github.com/heydeer/homebrew-tap/releases/download/pngdeer-v0.1.1/pngdeer-0.1.1-aarch64-apple-darwin.tar.gz"
-      sha256 "ec8d53fd37d22a257ac58d481e675577c09fe0add12cc3035b747f8abe7d91da"
+      url "https://github.com/heydeer/homebrew-tap/releases/download/pngdeer-v0.1.2/pngdeer-0.1.2-aarch64-apple-darwin.tar.gz"
+      sha256 "933ae8eea6bc6523785f71679dd4402d3c0d334ae8b0249de6b526d7405625c2"
     end
 
     on_intel do
-      url "https://github.com/heydeer/homebrew-tap/releases/download/pngdeer-v0.1.1/pngdeer-0.1.1-x86_64-apple-darwin.tar.gz"
-      sha256 "e837fd81cdfe775cc87e56a4f995c21ec8052ee888cc324a0393c15d91e9f982"
+      url "https://github.com/heydeer/homebrew-tap/releases/download/pngdeer-v0.1.2/pngdeer-0.1.2-x86_64-apple-darwin.tar.gz"
+      sha256 "ad733849e5fb44ac3826defafb3e18dc0a7afcdb5df2f61afb36a7ef2402861a"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/heydeer/homebrew-tap/releases/download/pngdeer-v0.1.1/pngdeer-0.1.1-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "593e4fec96bcffbdaf2e3e53f4bc541188365a5b57eb03d754de545ce324a675"
+      url "https://github.com/heydeer/homebrew-tap/releases/download/pngdeer-v0.1.2/pngdeer-0.1.2-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "25642fe159dfa86184676535350de9a64fb8bee9f390a5dd306bf999381e3c83"
     end
 
     on_intel do
-      url "https://github.com/heydeer/homebrew-tap/releases/download/pngdeer-v0.1.1/pngdeer-0.1.1-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "3320e36a384d7b9f728574dde8c23cc8096d40a39f592d4d28682f71a39b8e01"
+      url "https://github.com/heydeer/homebrew-tap/releases/download/pngdeer-v0.1.2/pngdeer-0.1.2-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "718474797dd0f01b11d95c86f0b525ae7a30f97f747cd79c49797fd165743ab8"
     end
   end
 
   def install
     bin.install "pngdeer"
-    prefix.install "LICENSE-MIT", "LICENSE-APACHE"
+    prefix.install "LICENSE"
     pkgshare.install "THIRD_PARTY_LICENSES.txt"
   end
 
