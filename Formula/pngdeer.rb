@@ -5,25 +5,25 @@ class Pngdeer < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/heydeer/homebrew-tap/releases/download/pngdeer-v0.1.0/pngdeer-0.1.0-aarch64-apple-darwin.tar.gz"
-      sha256 "5a8c07900a2573d58d80c876e96f57619ecbbd3715d74999773965ec34a9193e"
+      url "https://github.com/heydeer/homebrew-tap/releases/download/pngdeer-v0.1.1/pngdeer-0.1.1-aarch64-apple-darwin.tar.gz"
+      sha256 "ec8d53fd37d22a257ac58d481e675577c09fe0add12cc3035b747f8abe7d91da"
     end
 
     on_intel do
-      url "https://github.com/heydeer/homebrew-tap/releases/download/pngdeer-v0.1.0/pngdeer-0.1.0-x86_64-apple-darwin.tar.gz"
-      sha256 "f0b458c95d81929f7ac7cfd770469eb462b6d7b1936dda0145ac1dcd45822c47"
+      url "https://github.com/heydeer/homebrew-tap/releases/download/pngdeer-v0.1.1/pngdeer-0.1.1-x86_64-apple-darwin.tar.gz"
+      sha256 "e837fd81cdfe775cc87e56a4f995c21ec8052ee888cc324a0393c15d91e9f982"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/heydeer/homebrew-tap/releases/download/pngdeer-v0.1.0/pngdeer-0.1.0-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "b2cd46a982b22d14232d4c3931100b751ffda1911915660b544e7fad38fae7cb"
+      url "https://github.com/heydeer/homebrew-tap/releases/download/pngdeer-v0.1.1/pngdeer-0.1.1-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "593e4fec96bcffbdaf2e3e53f4bc541188365a5b57eb03d754de545ce324a675"
     end
 
     on_intel do
-      url "https://github.com/heydeer/homebrew-tap/releases/download/pngdeer-v0.1.0/pngdeer-0.1.0-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "96ae8405f7e50f0a5daf39180b86a33901d50be6f4b00b79ff5cbcd8d022d44b"
+      url "https://github.com/heydeer/homebrew-tap/releases/download/pngdeer-v0.1.1/pngdeer-0.1.1-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "3320e36a384d7b9f728574dde8c23cc8096d40a39f592d4d28682f71a39b8e01"
     end
   end
 
