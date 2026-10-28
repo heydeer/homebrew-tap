@@ -1,10 +1,11 @@
 # HeyDeer Homebrew Tap
 
-Install pngdeer, a PNG compressor with automatic quality selection:
+Install pngdeer, a PNG and WebP compressor with automatic quality selection:
 
 ```bash
 brew install heydeer/tap/pngdeer
 pngdeer input.png -o output.png
+pngdeer input.png -o output.webp
 ```
 
 Prebuilt binaries are available for macOS (Apple Silicon and Intel) and Linux (ARM64 and x86-64).

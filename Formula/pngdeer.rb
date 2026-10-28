@@ -1,29 +1,29 @@
 class Pngdeer < Formula
-  desc "Lossy PNG compression with automatic quality selection"
+  desc "Lossy PNG and WebP compression with automatic quality selection"
   homepage "https://github.com/heydeer/pngdeer"
   license "MIT"
 
   on_macos do
     on_arm do
-      url "https://github.com/heydeer/homebrew-tap/releases/download/pngdeer-v0.1.2/pngdeer-0.1.2-aarch64-apple-darwin.tar.gz"
-      sha256 "933ae8eea6bc6523785f71679dd4402d3c0d334ae8b0249de6b526d7405625c2"
+      url "https://github.com/heydeer/homebrew-tap/releases/download/pngdeer-v0.2.0/pngdeer-0.2.0-aarch64-apple-darwin.tar.gz"
+      sha256 "5e1745e08232d60a6050c611ed57521b8d0352e7f3a43d60d5ae2b4a79c073b8"
     end
 
     on_intel do
-      url "https://github.com/heydeer/homebrew-tap/releases/download/pngdeer-v0.1.2/pngdeer-0.1.2-x86_64-apple-darwin.tar.gz"
-      sha256 "ad733849e5fb44ac3826defafb3e18dc0a7afcdb5df2f61afb36a7ef2402861a"
+      url "https://github.com/heydeer/homebrew-tap/releases/download/pngdeer-v0.2.0/pngdeer-0.2.0-x86_64-apple-darwin.tar.gz"
+      sha256 "5324df85d4b891b59f3f830ea68c03b4fb5157bc4591d10436854daf39c7d4f7"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/heydeer/homebrew-tap/releases/download/pngdeer-v0.1.2/pngdeer-0.1.2-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "25642fe159dfa86184676535350de9a64fb8bee9f390a5dd306bf999381e3c83"
+      url "https://github.com/heydeer/homebrew-tap/releases/download/pngdeer-v0.2.0/pngdeer-0.2.0-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "475b0e2661f1e22f2056743fc02e278f2a99aa79e6823bab17d3b759b802ac2e"
     end
 
     on_intel do
-      url "https://github.com/heydeer/homebrew-tap/releases/download/pngdeer-v0.1.2/pngdeer-0.1.2-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "718474797dd0f01b11d95c86f0b525ae7a30f97f747cd79c49797fd165743ab8"
+      url "https://github.com/heydeer/homebrew-tap/releases/download/pngdeer-v0.2.0/pngdeer-0.2.0-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "43fec61382c9a389f47d07de8e5d309319fbbd40bb7ba254a2a09d6e2e70e966"
     end
   end
 
@@ -39,5 +39,7 @@ class Pngdeer < Formula
     assert_path_exists testpath/"output.png"
     assert_operator (testpath/"output.png").size, :<, (testpath/"input.png").size
     assert_equal "100.0000", shell_output("#{bin}/pngdeer input.png --score output.png").strip
+    system bin/"pngdeer", "input.png", "-o", "output.webp"
+    assert_equal "RIFF", File.binread(testpath/"output.webp", 4)
   end
 end
