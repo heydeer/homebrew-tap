@@ -10,6 +10,6 @@ slimdeer photo.jpg -o photo.avif
 
 Prebuilt binaries are available for macOS (Apple Silicon and Intel) and Linux (ARM64 and x86-64).
 
-Upgrade with `brew update && brew upgrade slimdeer`. slimdeer was called pngdeer until 0.3.0: `brew upgrade` moves an installed pngdeer to it.
+Upgrade with `brew update && brew upgrade slimdeer`. slimdeer was called pngdeer until 0.3.0. Homebrew's trust doesn't follow a rename, so move an installed pngdeer with `brew trust --formula heydeer/tap/slimdeer && brew upgrade`.
 
 Binary archives include the project and third-party licenses.
